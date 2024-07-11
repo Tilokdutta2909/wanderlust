@@ -90,15 +90,15 @@ app.use((req,res,next)=>{
 //   console.log("Current User in Middleware:", req.user); // Debugging line
 // });
 
-app.get("/demouser", async (req,res) => {
-  let fakeUser = new User({
-    email: "fakeuser@gmail.com",
-    username: "fakeuser"
-  });
+// app.get("/demouser", async (req,res) => {
+//   let fakeUser = new User({
+//     email: "fakeuser@gmail.com",
+//     username: "fakeuser"
+//   });
 
-  let registeredUser = await User.register(fakeUser, "helloworld");
-  res.send(registeredUser);
-})
+//   let registeredUser = await User.register(fakeUser, "helloworld");
+//   res.send(registeredUser);
+// })
 app.use("/listings", listingsRouter);
 app.use("/listings/:id/reviews", reviewsRouter);
 app.use("/",userRouter);
