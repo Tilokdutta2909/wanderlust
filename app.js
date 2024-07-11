@@ -85,10 +85,10 @@ app.use((req,res,next)=>{
   next();
 })
 
-app.get("/", (req, res) => {
-  res.send("Hi I am root");
-  console.log("Current User in Middleware:", req.user); // Debugging line
-});
+// app.get("/", (req, res) => {
+//   res.send("Hi I am root");
+//   console.log("Current User in Middleware:", req.user); // Debugging line
+// });
 
 app.get("/demouser", async (req,res) => {
   let fakeUser = new User({
